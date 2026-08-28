@@ -1,14 +1,12 @@
-<!-- PhaseNavigation.svelte -->
+<!-- src/lib/components/CharacterPlaceholder.svelte -->
 
 <script lang="ts">
   export let characterName: string;
-  export let primaryColor: string;
 </script>
 
 <div class="relative z-10 text-center">
   <div
-    class="mx-auto mb-5 flex h-28 w-28 items-center justify-center rounded-full text-5xl shadow-xl"
-    style={`background-color: ${primaryColor};`}
+    class="mx-auto mb-5 flex h-28 w-28 items-center justify-center rounded-full bg-twilight-primary text-5xl text-white shadow-xl"
   >
     ✨
   </div>

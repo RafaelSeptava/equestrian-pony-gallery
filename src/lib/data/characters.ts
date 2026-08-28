@@ -1,14 +1,6 @@
-// characters.ts
+// src/lib/data/characters.ts
 
 import type { Character, Phase } from "../types/character";
-
-const emptyPhases = (): Record<Phase, string> => ({
-  infant: "",
-  filly: "",
-  unicorn: "",
-  alicorn: "",
-  future: "",
-});
 
 export const characters: Character[] = [
   {
@@ -22,6 +14,8 @@ export const characters: Character[] = [
       secondary: "#EA428B",
       text: "#FFFFFF",
     },
+
+    palette: ["#132248", "#243870", "#652D87", "#EA428B", "#FFFFFF"],
 
     phases: {
       infant: new URL(
@@ -54,15 +48,35 @@ export const characters: Character[] = [
     role: "Element of Loyalty",
 
     colors: {
-      background: "#",
-      card: "#",
-      primary: "#",
-      secondary: "#",
-      text: "#",
+      background: "#1B98D1",
+      card: "#5C96C9",
+      primary: "#EC4141",
+      secondary: "#FDE85F",
+      text: "#FFFFFF",
     },
 
-    phases: emptyPhases(),
-    available: false,
+    palette: ["#1B98D1", "#5C96C9", "#EC4141", "#FDE85F", "#FFFFFF"],
+
+    phases: {
+      infant: new URL(
+        "/src/assets/rainbow-dash/rainbow-dash-infant.webp",
+        import.meta.url,
+      ).href,
+      filly: new URL(
+        "/src/assets/rainbow-dash/rainbow-dash-filly.webp",
+        import.meta.url,
+      ).href,
+      pegasus: new URL(
+        "/src/assets/rainbow-dash/rainbow-dash-pegasus.webp",
+        import.meta.url,
+      ).href,
+      future: new URL(
+        "/src/assets/rainbow-dash/rainbow-dash-future.webp",
+        import.meta.url,
+      ).href,
+    },
+
+    available: true,
   },
 
   {
@@ -77,7 +91,10 @@ export const characters: Character[] = [
       text: "#",
     },
 
-    phases: emptyPhases(),
+    palette: [],
+
+    phases: {},
+
     available: false,
   },
 
@@ -93,7 +110,10 @@ export const characters: Character[] = [
       text: "#",
     },
 
-    phases: emptyPhases(),
+    palette: [],
+
+    phases: {},
+
     available: false,
   },
 
@@ -109,7 +129,10 @@ export const characters: Character[] = [
       text: "#",
     },
 
-    phases: emptyPhases(),
+    palette: [],
+
+    phases: {},
+
     available: false,
   },
 
@@ -125,7 +148,10 @@ export const characters: Character[] = [
       text: "#",
     },
 
-    phases: emptyPhases(),
+    palette: [],
+
+    phases: {},
+
     available: false,
   },
 ];

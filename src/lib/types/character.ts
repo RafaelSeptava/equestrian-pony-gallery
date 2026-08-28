@@ -1,6 +1,13 @@
-// character.ts
+// src/lib/types/character.ts
 
-export type Phase = "infant" | "filly" | "unicorn" | "alicorn" | "future";
+export type Phase =
+  | "infant"
+  | "filly"
+  | "earth_pony"
+  | "unicorn"
+  | "pegasus"
+  | "alicorn"
+  | "future";
 
 export type CharacterColors = {
   background: string;
@@ -14,6 +21,7 @@ export type Character = {
   name: string;
   role: string;
   colors: CharacterColors;
-  phases: Record<Phase, string>;
+  palette: string[];
+  phases: Partial<Record<Phase, string>>;
   available: boolean;
 };

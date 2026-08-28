@@ -1,25 +1,23 @@
-<!-- Footer.svelte -->
+<!-- src/lib/components/Footer.svelte -->
 
 <script lang="ts">
-  export let cardColor: string;
 </script>
 
 <footer
-  class="border-t border-white/10 px-4 py-5 text-center text-xs opacity-70"
-  style={`background-color: ${cardColor};`}
+  class="border-t border-white/10 bg-(--theme-card) px-4 py-5 text-center text-xs"
 >
   <p class="text-xl">Created by Rafael Septava</p>
 
   <nav aria-label="Social Media" class="mt-3">
     <ul
-      class="flex items-center justify-center space-x-3 text-xs font-semibold p-0 m-0 list-none"
+      class="m-0 flex items-center justify-center space-x-3 p-0 list-none text-xs font-semibold"
     >
       <li>
         <a
           href="https://www.instagram.com/rafaelseptava"
           target="_blank"
           rel="noopener noreferrer"
-          class="transition-colors duration-200 hover:opacity-100 opacity-90 focus:outline-none focus:underline"
+          class="opacity-90 transition-colors duration-200 hover:opacity-100 focus:outline-none focus:underline"
         >
           Instagram
         </a>
@@ -30,7 +28,7 @@
           href="https://github.com/RafaelSeptava"
           target="_blank"
           rel="noopener noreferrer"
-          class="transition-colors duration-200 hover:opacity-100 opacity-90 focus:outline-none focus:underline"
+          class="opacity-90 transition-colors duration-200 hover:opacity-100 focus:outline-none focus:underline"
         >
           GitHub
         </a>
@@ -41,7 +39,7 @@
           href="https://linkedin.com/in/rafael-septava-254125328"
           target="_blank"
           rel="noopener noreferrer"
-          class="transition-colors duration-200 hover:opacity-100 opacity-90 focus:outline-none focus:underline"
+          class="opacity-90 transition-colors duration-200 hover:opacity-100 focus:opacity-100 focus:outline-none focus:underline"
         >
           LinkedIn
         </a>

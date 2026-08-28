@@ -1,4 +1,4 @@
-<!-- CharacterGallery.svelte -->
+<!-- src/lib/components/CharacterGallery.svelte -->
 
 <script lang="ts">
   import type { Character, Phase } from "../types/character";
@@ -13,8 +13,7 @@
 
 <section aria-label="Character gallery" class="w-full max-w-5xl">
   <div
-    class="grid overflow-hidden rounded-3xl shadow-2xl md:grid-cols-[1fr_0.8fr]"
-    style={`background-color: ${character.colors.card};`}
+    class="grid overflow-hidden rounded-3xl bg-(--theme-card) shadow-2xl md:grid-cols-[1fr_0.8fr]"
   >
     <!-- Image -->
     <div
@@ -22,20 +21,16 @@
     >
       {#if character.available}
         <div
-          class="absolute inset-8 rounded-full opacity-30 blur-3xl"
-          style={`background-color: ${character.colors.primary};`}
+          class="absolute inset-8 rounded-full bg-(--theme-primary) opacity-30 blur-3xl"
         ></div>
 
         <img
           src={character.phases[activePhase]}
           alt={`${character.name} - ${activePhase}`}
-          class="relative z-10 w-auto max-w-full max-h-125 rounded-2xl object-contain transition-all duration-300"
+          class="relative z-10 max-h-125 w-auto max-w-full rounded-2xl object-contain transition-all duration-300"
         />
       {:else}
-        <CharacterPlaceholder
-          characterName={character.name}
-          primaryColor={character.colors.primary}
-        />
+        <CharacterPlaceholder characterName={character.name} />
       {/if}
     </div>
 
@@ -58,12 +53,7 @@
       <div class="my-7 h-px w-full bg-white/10"></div>
 
       {#if character.available}
-        <PhaseNavigation
-          {activePhase}
-          secondaryColor={character.colors.secondary}
-          backgroundColor={character.colors.background}
-          onSelect={onPhaseSelect}
-        />
+        <PhaseNavigation {character} {activePhase} onSelect={onPhaseSelect} />
       {:else}
         <p class="text-sm leading-6 opacity-70">
           This character is already available in the navigation menu, but the
